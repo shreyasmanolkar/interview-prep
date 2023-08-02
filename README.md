@@ -71,6 +71,8 @@ Also review **recursion and iterative approaches**.
 
 **Prepare 1-2 questions to ask your interviewer:** There is generally 5 minutes at the end of a typical interview for this.
 
+**[⬆ back to top](#table-of-contents)**
+
 # Resources
 
 ## Suggested reading
@@ -106,6 +108,8 @@ Also review **recursion and iterative approaches**.
 ## Misc.
 
 - [Flexbox Froggy](http://flexboxfroggy.com/)
+
+**[⬆ back to top](#table-of-contents)**
 
 # Computer Science
 
@@ -615,6 +619,8 @@ A common example of a logarithms is the Binary search:
 **Binary search** is a technique used to search sorted data sets. It works by selecting the middle element of the data set, and compares it against a target value. If the values match it will return success. If the target value is higher than the value of the probe element it will take the upper half of the data set and perform the same operation against it. Likewise, if the target value is lower than the value of the probe element it will perform the operation against the lower half. It will continue to halve the data set with each iteration until the value has been found or until it can no longer split the data set.
 
 This type of algorithm is described as **O(log N)**. The iterative halving of data sets described in the binary search example produces a growth curve that peaks at the beginning and slowly flattens out as the size of the data sets increase e.g. an input data set containing 10 items takes one second to complete, a data set containing 100 items takes two seconds, and a data set containing 1000 items will take three seconds. Doubling the size of the input data set has little effect on its growth as after a single iteration of the algorithm the data set will be halved and therefore on a par with an input data set half the size. This makes algorithms like binary search extremely efficient when dealing with large data sets.
+
+**[⬆ back to top](#table-of-contents)**
 
 # JavaScript + Web APIs
 
@@ -1353,6 +1359,8 @@ A memoized function "remembers" the results corresponding to some set of specifi
 
 Memoization is a way to lower a function's time cost in exchange for space cost; that is, memoized functions become optimised for speed in exchange for a higher use of computer memory space. The time/space "cost" of algorithms has a specific name in computing: computational complexity. All functions have a computational complexity in time (i.e. they take time to execute) and in space.
 
+**[⬆ back to top](#table-of-contents)**
+
 # Design Patterns
 
 ## Decorator
@@ -1643,6 +1651,8 @@ To favor composition over inheritance is a design principle that gives the desig
 
 Initial design is simplified by identifying system object behaviors in separate interfaces instead of creating a hierarchical relationship to distribute behaviors among business-domain classes via inheritance. This approach more easily accommodates future requirements changes that would otherwise require a complete restructuring of business-domain classes in the inheritance model. Additionally, it avoids problems often associated with relatively minor changes to an inheritance-based model that includes several generations of classes.
 
+**[⬆ back to top](#table-of-contents)**
+
 # HTML / CSS
 
 ## Flexbox
@@ -1699,6 +1709,8 @@ If you want to dive into a more hands-on learning plan with recommended activiti
 - Building an accessible form
 - Providing accessible error messages
 - Accessibility testing
+
+**[⬆ back to top](#table-of-contents)**
 
 # Questions
 
