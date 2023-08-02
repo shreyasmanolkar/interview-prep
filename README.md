@@ -48,12 +48,12 @@
   * [Functions](#functions)
   * [Objects and Data Structures](#objects-and-data-structures)
   * [Classes](#classes)
--[SOLID](#solid)
--[Testing](#testing)
--[Concurrency](#concurrency)
--[Error Handling](#error-handling)
--[Formatting](#formatting)
--[Comments](#comments)
+- [SOLID](#solid)
+- [Testing](#testing)
+- [Concurrency](#concurrency)
+- [Error Handling](#error-handling)
+- [Formatting](#formatting)
+- [Comments](#comments)
 
 <!-- tocstop -->
 
