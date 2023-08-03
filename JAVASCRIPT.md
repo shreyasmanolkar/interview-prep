@@ -31,3 +31,8 @@ The scope in JavaScript helps in organizing and encapsulating code, preventing v
 - const was also introduced in ES6.
 - Variables declared with const are block-scoped and behave similarly to let, but they have an important distinction - they are constants, meaning their value cannot be changed after declaration.
 - It's important to note that const only makes the binding (the reference to the value) immutable, not the value itself. If the value is an object or an array, its properties or elements can still be modified.
+
+### Variable Shadowing
+Variable shadowing occurs when a variable with a certain name is declared within a scope that already contains a variable with the same name. The newly declared variable "shadows" or takes precedence over the outer variable, effectively hiding it within the inner scope.
+While shadowing the variable it should not cross the boundary of scope. i.e. we can shadow var variable by using let, but cannot do the opposite.
+
