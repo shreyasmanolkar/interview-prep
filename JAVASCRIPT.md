@@ -36,3 +36,12 @@ The scope in JavaScript helps in organizing and encapsulating code, preventing v
 Variable shadowing occurs when a variable with a certain name is declared within a scope that already contains a variable with the same name. The newly declared variable "shadows" or takes precedence over the outer variable, effectively hiding it within the inner scope.
 While shadowing the variable it should not cross the boundary of scope. i.e. we can shadow var variable by using let, but cannot do the opposite.
 
+
+### Hoisting
+It refers to the process of moving variable and function declarations to the top of their containing scope during the compilation phase, before the actual code execution. 
+
+When a variable is declared using the var keyword, its declaration is hoisted to the top of the current function or global scope. However, only the declaration is hoisted, not the initialization. Initialization remains in place, and if the variable is accessed before the assignment, it will have the value undefined.
+
+It's important to note that hoisting only applies to declarations and not initializations. Additionally, hoisting with let and const variables works slightly differently compared to var. While they are hoisted, they are not initialized to undefined, and accessing them before the actual declaration will result in a ReferenceError.
+
+Function declarations are hoisted in their entirety, meaning both the function name and the function body are hoisted to the top of the scope. This allows you to call a function before its actual declaration in the code.
