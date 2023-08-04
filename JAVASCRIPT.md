@@ -42,6 +42,32 @@ It refers to the process of moving variable and function declarations to the top
 
 When a variable is declared using the var keyword, its declaration is hoisted to the top of the current function or global scope. However, only the declaration is hoisted, not the initialization. Initialization remains in place, and if the variable is accessed before the assignment, it will have the value undefined.
 
-It's important to note that hoisting only applies to declarations and not initializations. Additionally, hoisting with let and const variables works slightly differently compared to var. While they are hoisted, they are not initialized to undefined, and accessing them before the actual declaration will result in a ReferenceError.
+It's important to note that hoisting only applies to declarations and not initializations. Additionally, hoisting with let and const variables works slightly differently compared to var. While they are hoisted, they are not initialized to undefined but are in temporal dead zone (TDZ), and accessing them before the actual declaration will result in a ReferenceError.
 
 Function declarations are hoisted in their entirety, meaning both the function name and the function body are hoisted to the top of the scope. This allows you to call a function before its actual declaration in the code.
+
+### Temporal dead zone
+Temporal dead zone is where a variable is inaccessible until the moment the computer initializes it with a value.
+
+### Map 
+map is a higher-order array method that is used to transform elements of an array and create a new array based on the transformation. It takes a callback function as an argument, which is called for each element in the original array. The callback function can modify the elements and return new values that will be used to create a new array.
+
+### Filter
+filter() is higher-order array method that allows to create a new array containing elements from the original array that meet a specific condition. It iterates through each element of the array and calls a callback function for each element. If the callback function returns true for an element, that element is included in the new array; otherwise, it is excluded.
+
+### Reduce 
+reduce() method is a powerful higher-order array method that is used to reduce an array to a single value. It iterates through the elements of the array and accumulates a result by applying a callback function to each element. 
+
+#### map vs forEach
+
+- map():
+Purpose: map() is used to transform elements of an array and create a new array with the transformed values. It takes a callback function as an argument and applies that function to each element in the array, creating a new array based on the return values of the callback function.
+Return value: map() returns a new array containing the results of the transformation performed by the callback function on each element of the original array.
+Does not modify the original array: map() does not change the original array; it only creates a new array with the transformed values.
+we can chain other methods after map.
+
+- forEach():
+Purpose: forEach() is used to iterate over the elements of an array and perform a specified action or side effect for each element. It takes a callback function as an argument and applies that function to each element in the array.
+Return value: forEach() does not return anything; it always returns undefined.
+Does not create a new array: Unlike map(), forEach() does not create a new array. It is primarily used when you want to perform some action for each element in the array, such as updating the elements or logging them to the console.
+
