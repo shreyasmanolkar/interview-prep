@@ -112,3 +112,24 @@ A closure is the combination of a function bundled together (enclosed) with refe
 
 ### Lexical Scope
 lexical scope means a variable defined outside the function can be accessible inside of another funcition defined after a variable declaration.
+
+
+### currying 
+currying is a function that takes one argument at a time and returns a new function expecting the next argument.
+
+it is the conversion of function from callable as f(a,b) to this f(a)(b)
+
+and currying functions are constructed by chaining closure by immediately returning their inner functions simultaneously.
+
+#### why use currying
+✅ It makes a function pure which makes it expose to less errors and side effects.
+
+✅ It helps in avoiding the same variable again and again.
+
+✅ It is a checking method that checks if you have all the things before you proceed.
+
+✅ It divides one function into multiple functions so that one handles one set of responsibility.
+
+#### Partial application
+Partial application transform a function into another function with small arity (number of operands or the number of arguments a function receives).
+
