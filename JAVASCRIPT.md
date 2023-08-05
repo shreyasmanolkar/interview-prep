@@ -84,7 +84,7 @@ you can create anonymous functions (functions without a name) using function exp
 #### First class functions
 In a language where a function can be treated like a variable their functions are called as first class functions. in this cases functions can be passed into another functions can be used manipulated and returned from those functions and basically everything that a variable can do a function can also do. 
 
-#### What is IFFY?
+#### What is IFFE?
 IFFY stands for immediately invoked function expressions.
 
 #### Spread 
@@ -106,3 +106,9 @@ Shorter syntax: Arrow functions provide a shorter syntax compared to regular fun
 Lexical this binding: Unlike regular functions, arrow functions do not have their own this value. Instead, they inherit the this value from the surrounding context (i.e., the context in which the arrow function is defined). This feature is called "lexical scoping."
 
 No arguments object: Arrow functions do not have their own arguments object. Instead, you can use the rest parameter syntax (...args) to gather all the function arguments into an array.
+
+## Closure
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+### Lexical Scope
+lexical scope means a variable defined outside the function can be accessible inside of another funcition defined after a variable declaration.
