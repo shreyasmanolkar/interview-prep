@@ -1,5 +1,7 @@
 # Javascript
 
+## Fundamental
+
 ### Scope
 Scope in JavaScript refers to the accessibility and visibility of variables, functions, and objects within the code. It determines where in the code a variable or function can be accessed or modified. 
 There are two main types of scope:
@@ -71,3 +73,36 @@ Purpose: forEach() is used to iterate over the elements of an array and perform 
 Return value: forEach() does not return anything; it always returns undefined.
 Does not create a new array: Unlike map(), forEach() does not create a new array. It is primarily used when you want to perform some action for each element in the array, such as updating the elements or logging them to the console.
 
+## Functions
+
+#### Function declaration
+A function declaration defines a named function that can be called later in the code.
+
+#### Function expression
+you can create anonymous functions (functions without a name) using function expressions. They can be assigned to variables or used as callback functions. 
+
+#### First class functions
+In a language where a function can be treated like a variable their functions are called as first class functions. in this cases functions can be passed into another functions can be used manipulated and returned from those functions and basically everything that a variable can do a function can also do. 
+
+#### What is IFFY?
+IFFY stands for immediately invoked function expressions.
+
+#### Spread 
+The spread operator is used to split an array or an object into individual elements. It is commonly used in array literals or function calls to "spread" the elements of an array or object into individual elements.
+
+#### Rest Parameter
+The rest parameter is used in function definitions to represent an indefinite number of arguments as an array.
+
+### Callback function
+In JavaScript, a callback function is a function that is passed as an argument to another function and is executed or called inside that function. The primary purpose of using a callback function is to ensure that certain code or tasks are executed only after the completion of another task or asynchronous operation.
+
+### Arrow function
+Arrow functions, introduced in ECMAScript 6 (ES6), are a concise and convenient way to define functions in JavaScript.
+
+Key points about arrow functions:
+
+Shorter syntax: Arrow functions provide a shorter syntax compared to regular function expressions, making the code more concise and easier to read.
+
+Lexical this binding: Unlike regular functions, arrow functions do not have their own this value. Instead, they inherit the this value from the surrounding context (i.e., the context in which the arrow function is defined). This feature is called "lexical scoping."
+
+No arguments object: Arrow functions do not have their own arguments object. Instead, you can use the rest parameter syntax (...args) to gather all the function arguments into an array.
