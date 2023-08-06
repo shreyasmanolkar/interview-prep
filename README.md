@@ -54,6 +54,7 @@
 - [Error Handling](#error-handling)
 - [Formatting](#formatting)
 - [Comments](#comments)
+- [React](#react)
 
 <!-- tocstop -->
 
@@ -1358,6 +1359,47 @@ Memoization is an optimisation technique used primarily to speed up computer pro
 A memoized function "remembers" the results corresponding to some set of specific inputs. Subsequent calls with remembered inputs return the remembered result rather than recalculating it, thus eliminating the primary cost of a call with given parameters from all but the first call made to the function with those parameters. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set, depending on the nature of the function and its use. A function can only be memoized if it is referentially transparent; that is, only if calling the function has exactly the same effect as replacing that function call with its return value.
 
 Memoization is a way to lower a function's time cost in exchange for space cost; that is, memoized functions become optimised for speed in exchange for a higher use of computer memory space. The time/space "cost" of algorithms has a specific name in computing: computational complexity. All functions have a computational complexity in time (i.e. they take time to execute) and in space.
+
+### SetTimeout
+### Event loop
+### Micro Task
+### Promise.resolve()
+### placement of JS File
+#### Critical rendering path
+##### Blocking
+##### Non-Blocking
+### TDZ
+### Pure Functions
+#### polyfills
+#### map
+#### filter
+#### reduce
+#### compose
+#### curring
+### This
+
+### Promises Asyn Await
+#### parallel requests
+#### sub sequential requests
+#### exit callback
+#### promise implementation
+
+### Debounce Throttle
+
+### Questions
+#### map vs forEach
+#### null vs undefined
+#### null vs undefined
+#### Explaing event delegation
+#### Flatten the Array ( custom flat array )
+#### setTimeOut
+#### implement promise.all
+#### hoisting
+#### implicit and explicit binding
+#### cashing / memoizing function
+#### output Event Loop ( jsv9000.app ) (https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+#### Infinite Currying
+####  
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -5490,3 +5532,31 @@ function getActiveSubscriptions(): Promise<Subscription[]> {
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+# react
+
+### What is React and how it is different for other javascript frameworks.
+#### Virtual DOM
+#### view-oriented
+#### unidirectional data flow
+#### component based
+
+### Reconcilitation
+#### How react handles updates and rendering
+#### Diffing Algorithm
+
+### props and state
+
+### server side rendering vs client side rendering
+
+### NEXT.js
+
+### Refs in React
+
+### React Fiber
+
+### Synthetic Events
+
+#### life cycle methods in react in class components and functional components
+#### ways to center a div
+#### box model

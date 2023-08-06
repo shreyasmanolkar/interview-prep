@@ -159,13 +159,14 @@ In JavaScript, a "call" is a method that allows you to invoke a function with a 
 ### bind
 "bind" method is used to create a new function with a specified "this" context. It allows you to permanently associate a specific object as the "this" value inside the function, regardless of how the function is called later. This is particularly useful when you want to pass a method as a callback, maintain a specific context, or create a partially applied function with preset arguments. 
 
-
-## Promises
-
-
 ### Event Deligation
+Event delegation is a popular technique in JavaScript used to handle events efficiently, especially when working with dynamic content or a large number of elements. Instead of attaching event handlers to each individual element, event delegation involves adding a single event listener to a parent element that encompasses all the relevant child elements. This parent element "delegates" the event handling to its children based on the event's target, allowing you to handle events on dynamically added elements without the need to add new event listeners every time.
+
 ### Event Propogation
+Event propagation, also known as event bubbling and event capturing, refers to the process by which events are propagated through the DOM (Document Object Model) hierarchy. When an event is triggered on an element, it can affect not only that element but also its ancestor and descendant elements. Event propagation has two main phases: capturing phase and bubbling phase.
+
 ### Event Bubbling
-### Event Trickling
+Event bubbling is a specific type of event propagation in the DOM (Document Object Model). When an event is triggered on an element, such as a click event, the event starts at the target element and then "bubbles up" through its ancestors in the DOM hierarchy until it reaches the root element (usually the document). During this process, each ancestor's event handlers for the given event type are executed, allowing them to respond to the event.
+
 ### Event Capturing
-### Event Capturing
+Event capturing is the process where an event is first captured by the outermost ancestor element and then travels through the DOM hierarchy towards the target element. During this phase, event handlers with the { capture: true } option are executed.
