@@ -133,3 +133,18 @@ and currying functions are constructed by chaining closure by immediately return
 #### Partial application
 Partial application transform a function into another function with small arity (number of operands or the number of arguments a function receives).
 
+## Objects
+
+### Object binding
+there are 2 way to bind objects in javascript.
+1 - implicit
+2 - explicit
+
+implicit binding is applied when we invoke a function in an object using the dot notation. this keyword in such scenarios will point to the object using which the function was invoked or simply the object on the left hand side of the dot.
+
+explicit binding can be applied using call, bind and apply.
+
+
+#### 'this' keyword
+this refer to th object that is executing the current function.
+
