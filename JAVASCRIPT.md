@@ -158,3 +158,6 @@ In JavaScript, a "call" is a method that allows you to invoke a function with a 
 
 ### bind
 "bind" method is used to create a new function with a specified "this" context. It allows you to permanently associate a specific object as the "this" value inside the function, regardless of how the function is called later. This is particularly useful when you want to pass a method as a callback, maintain a specific context, or create a partially applied function with preset arguments. 
+
+
+## Promises
