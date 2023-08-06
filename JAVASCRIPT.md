@@ -148,3 +148,13 @@ explicit binding can be applied using call, bind and apply.
 #### 'this' keyword
 this refer to th object that is executing the current function.
 
+## call, bind, apply
+
+### call
+In JavaScript, a "call" is a method that allows you to invoke a function with a specified "this" context and arguments. It is used to call a function that belongs to an object while setting the value of "this" explicitly or to borrow a method from one object and use it for another.
+
+### apply
+"apply" method is another way to invoke a function with a specified "this" context and arguments, similar to the "call" method. It allows you to call a function that belongs to an object, but instead of passing individual arguments, you pass an array (or an array-like object) of arguments.
+
+### bind
+"bind" method is used to create a new function with a specified "this" context. It allows you to permanently associate a specific object as the "this" value inside the function, regardless of how the function is called later. This is particularly useful when you want to pass a method as a callback, maintain a specific context, or create a partially applied function with preset arguments. 
