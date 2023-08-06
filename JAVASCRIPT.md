@@ -161,3 +161,11 @@ In JavaScript, a "call" is a method that allows you to invoke a function with a 
 
 
 ## Promises
+
+
+### Event Deligation
+### Event Propogation
+### Event Bubbling
+### Event Trickling
+### Event Capturing
+### Event Capturing

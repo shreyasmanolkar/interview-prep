@@ -194,87 +194,115 @@ const secondPromise = new Promise((resolve, reject) => {
 
 // ---------------------------- polyfills
 
-function PromisePolyfill(executor) {
-  let onResolve, onReject, isFullfilled = false, isRejected = false, isCalled = false, value;
+// function PromisePolyfill(executor) {
+//   let onResolve, onReject, isFullfilled = false, isRejected = false, isCalled = false, value;
 
-  function resolve(val) {
-    isFullfilled = true;
-    value = val;
+//   function resolve(val) {
+//     isFullfilled = true;
+//     value = val;
 
-    if(typeof onResolve === 'function') {
-      onResolve(val);
-      isCalled = true;
-    } 
+//     if(typeof onResolve === 'function') {
+//       onResolve(val);
+//       isCalled = true;
+//     } 
 
-  }
+//   }
 
-  function reject(val) {
-    isRejected = true;
-    value = val;
-    if(typeof onReject === "function") {
-      onReject(val);
-      called = true;
-    }
-  }
+//   function reject(val) {
+//     isRejected = true;
+//     value = val;
+//     if(typeof onReject === "function") {
+//       onReject(val);
+//       called = true;
+//     }
+//   }
 
-  this.then = function (callback) {
-    onResolve = callback;
+//   this.then = function (callback) {
+//     onResolve = callback;
 
-    if(isFullfilled && !isCalled) {
-      called = true;
-      onResolve(value);
-    }
+//     if(isFullfilled && !isCalled) {
+//       called = true;
+//       onResolve(value);
+//     }
 
-    return this;
-  };
+//     return this;
+//   };
 
-  this.catch = function (callback) {
-    onReject = callback;
+//   this.catch = function (callback) {
+//     onReject = callback;
     
-    if(isRejected && !isCalled) {
-      isCalled = true;
-      onReject(value);
-    }
+//     if(isRejected && !isCalled) {
+//       isCalled = true;
+//       onReject(value);
+//     }
 
-    return this;
-  }
+//     return this;
+//   }
 
-  try {
-    executor(resolve, reject)
-  } catch (error) {
-    reject(error);
-  }
-}
+//   try {
+//     executor(resolve, reject)
+//   } catch (error) {
+//     reject(error);
+//   }
+// }
 
-const examplePromise = new PromisePolyfill((resolve, reject) => {
-  setTimeout(() => {
-    resolve(2);
-  }, 1000);
-});
+// const examplePromise = new PromisePolyfill((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(2);
+//   }, 1000);
+// });
 
-examplePromise.then((res) => {
-  console.log(res);
-}).catch((err) => console.error(err));
+// examplePromise.then((res) => {
+//   console.log(res);
+// }).catch((err) => console.error(err));
 
-PromisePolyFill.all = (promises) => {
-  let fulfilledPromises = [],
-    result = [];
+// PromisePolyFill.all = (promises) => {
+//   let fulfilledPromises = [],
+//     result = [];
 
-  function executor(resolve, reject) {
-    promises.forEach((promise, index) =>
-      promise
-        .then((val) => {
-          fulfilledPromises.push(true);
-          result[index] = val;
+//   function executor(resolve, reject) {
+//     promises.forEach((promise, index) =>
+//       promise
+//         .then((val) => {
+//           fulfilledPromises.push(true);
+//           result[index] = val;
 
-          if (fulfilledPromises.length === promises.length) {
-            return resolve(result);
-          }
-        })
-        .catch((error) => {
-          return reject(error);
-        })
-    );
-  }
-  return new PromisePolyFill(executor);
+//           if (fulfilledPromises.length === promises.length) {
+//             return resolve(result);
+//           }
+//         })
+//         .catch((error) => {
+//           return reject(error);
+//         })
+//     );
+//   }
+//   return new PromisePolyFill(executor);
+// };
+
+
+// --- Debounce 
+
+const myDebounce = (cb, d) => {
+  let timer;
+
+  return function (...args) {
+    if(timer) clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      cb(...args);
+    }, d);
+  };
+};
+
+// --- Throttle
+
+const myThrottle = (cb, d) => {
+  let last = 0;
+
+  return (...args) => {
+    let now = new Date().getTime();
+    if(now - last < d ) return;
+    last - now;
+    return cb(...args);
+  };
 };
